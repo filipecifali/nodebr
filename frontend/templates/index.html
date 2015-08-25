@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Entre para o Slack da comunidade NodeBR e fale em tempo real com vários noders ao redor do Brasil">
+  <title>NodeBR - Slack</title>
+  <link rel="stylesheet" href="/css/@@hash.css">
+</head>
+<body>
+  <div class="container">
+    <form class="form-signin" onsubmit="client.invite(event);">
+      <h2 class="form-signin-heading">Convite para Slack</h2>
+      <p>Digite seu e-mail abaixo para receber um convite em sua caixa postal e participar do chat da comunidade NodeBR no Slack.</p>
+      <div class="alert alert-success" role="alert">Seu convite foi enviado com sucesso, verifique sua caixa de entrada ou a pasta de spam</div>
+      <div class="alert alert-danger" role="alert">Não foi possível enviar o convite. Verifique o que foi preenchido e tente novamente</div>
+      <label for="inputEmail" class="sr-only">Endereço de e-mail</label>
+      <input type="email" class="form-control" placeholder="Seu e-mail" required autofocus>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar convite</button>
+      <div class="col-md-12 text-center">
+        <a href="https://nodebr.slack.com">Já tenho login</a> • <a href="https://github.com/nodebr/nodebr/tree/slack">Fork on Github</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="/js/@@hash.js"></script>
+</body>
+</html>

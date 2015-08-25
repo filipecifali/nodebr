@@ -1,4 +1,0 @@
-{
-  "mode": "testing",
-  "mongodb": "mongodb://localhost:27017/nodebr_test"
-}

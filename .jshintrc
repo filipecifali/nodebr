@@ -1,12 +1,12 @@
 {
   "node": true,
-  "boss": false,
+  "boss": true,
   "bitwise": true,
   "noempty": true,
   "latedef": true,
   "camelcase": false,
   "eqeqeq": true,
-  "smarttabs": false,
+  "smarttabs": true,
   "undef": true,
   "unused": true,
   "newcap": true,
@@ -14,14 +14,13 @@
   "maxlen": 80,
   "maxcomplexity": 5,
   "indent": 2,
-  "strict": false,
   "quotmark": "single",
+  "strict": false,
   "globals": {
     "describe": true,
     "before": true,
     "after": true,
     "it": true,
-    "beforeEach": true,
-    "afterEach": true
+    "test": true
   }
 }
