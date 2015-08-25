@@ -13,7 +13,7 @@ de comandos úteis:
 produção
 * `npm start` inicia o servidor em modo de desenvolvimento utilizando o `nodemon`
 
-### Licensa ISC
+### Licença ISC
 
 ```
 Copyright (c) 2015, Alan Hoffmeister <alanhoffmeister@gmail.com>
