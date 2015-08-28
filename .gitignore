@@ -32,4 +32,6 @@ node_modules
 # Outros diretórios que não precisamos
 /public
 /templates
+/config
+!/config/default.json
 
