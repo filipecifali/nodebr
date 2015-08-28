@@ -42,3 +42,7 @@ body {
 .alert {
   display: none;
 }
+
+.slack {
+  margin-top: 10px;
+}

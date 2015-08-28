@@ -30,8 +30,6 @@ exports.register = function(server, options, next) {
       if (cached)
         return reply(cached).type(mimes[request.query.type]);
 
-      console.log(cached);
-
       client.get(config.slack.endpoint + '/rtm.start', {
         qs: {
           token: config.slack.token,
