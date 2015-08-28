@@ -28,12 +28,15 @@
     "boom": "^2.8.0",
     "bootstrap": "^3.3.5",
     "config": "^1.15.0",
+    "gm": "^1.18.1",
     "hapi": "^9.0.3",
     "inert": "^3.0.1",
     "joi": "^6.6.1",
     "jquery": "^2.1.4",
+    "memory-cache": "^0.1.4",
     "mout": "^0.11.0",
     "request-promise": "^0.4.3",
+    "vd": "^0.8.2",
     "winston": "^1.0.1"
   },
   "devDependencies": {
