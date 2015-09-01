@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "grunt": "./node_modules/.bin/grunt",
+    "grunt": "./node_modules/.bin/grunt --gruntfile .grunt.es6",
     "babel": "./node_modules/.bin/babel-node",
     "start": "./node_modules/.bin/nodemon --ignore public --ignore templates --ignore frontend --ignore tasks --exec npm run babel -- app.js"
   },
