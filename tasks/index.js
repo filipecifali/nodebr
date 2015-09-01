@@ -1,10 +1,14 @@
-var fs = require('fs');
-module.exports = [];
+// Carrega dinamicamente todas as tasks desta pasta
+import fs from 'fs';
 
-fs.readdirSync('.')
-  .filter(function(ctrl) {
-    return ctrl.match(/-task.\js/i);
+let tasks = [];
+
+fs.readdirSync(__dirname)
+  .filter(file => {
+    return file.match(/-task.\js/i);
   })
-  .forEach(function(ctrl) {
-    module.exports.push(require('./' + ctrl));
+  .forEach(file => {
+    tasks.push(require('./' + file));
   });
+
+export default tasks;
