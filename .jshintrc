@@ -16,6 +16,7 @@
   "indent": 2,
   "quotmark": "single",
   "strict": false,
+  "esnext": true,
   "globals": {
     "describe": true,
     "before": true,

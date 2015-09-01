@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "grunt": "./node_modules/.bin/grunt",
-    "start": "./node_modules/.bin/nodemon --ignore public,templates,frontend,tasks app.js"
+    "babel": "./node_modules/.bin/babel-node",
+    "start": "./node_modules/.bin/nodemon --ignore public --ignore templates --ignore frontend --ignore tasks --exec npm run babel -- app.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/nodebr/nodebr#readme",
   "dependencies": {
+    "babel": "^5.8.23",
     "bluebird": "^2.9.34",
     "boom": "^2.8.0",
     "bootstrap": "^3.3.5",
