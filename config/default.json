@@ -1,0 +1,20 @@
+{
+  "winston": {
+    "timestamp": true,
+    "prettyPrint": true,
+    "level": "debug"
+  },
+  "hapi": {
+    "connection": {
+      "host": "localhost",
+      "port": 8080
+    }
+  },
+  "server": {
+    "signal": "SIGINT"
+  },
+  "slack": {
+    "token": "insira_aqui_seu_token",
+    "endpoint": "https://nodebr.slack.com/api"
+  }
+}
