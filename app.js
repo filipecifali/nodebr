@@ -1,27 +1,26 @@
 // Aqui é onde a magia acontece :-)
-import server from './lib/server';
+import HttpServer from './lib/http-server';
 import config from 'config';
 import log from './lib/log';
+import middlewares from './middlewares';
+import controlelrs from './controllers';
 
-let inst = null;
+let {host, port} = config.hapi.connection;
+let plugins = middlewares.concat(controlelrs);
+let server = new HttpServer(plugins, port, host);
 
-log.info('Iniciando bootstrap do servidor HTTP');
+log.info('Iniciando servidor http');
 server.start()
-  .then(i => {
-    inst = i;
-    log.log('info', 'Servidor iniciado com sucesso na porta %s e na interface' +
-      ' %s', config.hapi.connection.port, config.hapi.connection.host);
-  });
+  .then(() => log.info(`Servidor iniciado em http://${host}:${port}`));
 
 // Vamos escutar se o sistema manda o servidor parar
 process.on(config.server.signal, () => {
-  log.log('info', 'O servidor recebeu o sinal %s, iniciando parada',
-    config.server.signal);
+  log.info(`Sinal de parada ${config.server.signal} recebido`);
 
   // Enviamos a instância criada para o método stop
-  server.stop(inst)
+  server.stop()
     .then(() => {
-      log.log('Servidor parou, finalizando processo.');
+      log.info('Servidor HTTP parou, até mais!');
       process.exit();
     });
 });
